@@ -1,0 +1,128 @@
+[
+  {
+    "model": "request.paymentrequest",
+    "pk": 1,
+    "fields": {
+      "amount": "15000.00",
+      "currency": "RUB",
+      "recipient_name": "Иванов Иван Иванович",
+      "recipient_account": "40817810099910004312",
+      "recipient_bank": "ПАО Сбербанк",
+      "recipient_bank_code": "044525225",
+      "status": "completed",
+      "description": "Оплата за консультационные услуги за январь 2024",
+      "created_at": "2024-01-15T10:30:00Z",
+      "updated_at": "2024-01-15T14:20:00Z",
+      "processed_at": "2024-01-15T14:20:00Z",
+      "rejection_reason": ""
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 2,
+    "fields": {
+      "amount": "2500.50",
+      "currency": "USD",
+      "recipient_name": "John Smith",
+      "recipient_account": "US64SVBKUS6S3300958879",
+      "recipient_bank": "Silicon Valley Bank",
+      "recipient_bank_code": "SVBKUS6S",
+      "status": "pending",
+      "description": "Payment for software development services",
+      "created_at": "2024-12-01T08:15:00Z",
+      "updated_at": "2024-12-01T08:15:00Z",
+      "processed_at": null,
+      "rejection_reason": ""
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 3,
+    "fields": {
+      "amount": "750.00",
+      "currency": "EUR",
+      "recipient_name": "Marie Dubois",
+      "recipient_account": "FR1420041010050500013M02606",
+      "recipient_bank": "BNP Paribas",
+      "recipient_bank_code": "BNPAFRPP",
+      "status": "processing",
+      "description": "Remboursement de frais de déplacement",
+      "created_at": "2024-11-28T14:45:00Z",
+      "updated_at": "2024-11-29T09:30:00Z",
+      "processed_at": null,
+      "rejection_reason": ""
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 4,
+    "fields": {
+      "amount": "50000.00",
+      "currency": "RUB",
+      "recipient_name": "ООО 'Технологии Будущего'",
+      "recipient_account": "40702810638000123456",
+      "recipient_bank": "АО 'Альфа-Банк'",
+      "recipient_bank_code": "044525593",
+      "status": "rejected",
+      "description": "Оплата за оборудование",
+      "created_at": "2024-11-20T11:00:00Z",
+      "updated_at": "2024-11-21T16:45:00Z",
+      "processed_at": null,
+      "rejection_reason": "Неверные реквизиты получателя. Необходимо уточнить БИК банка."
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 5,
+    "fields": {
+      "amount": "1200.00",
+      "currency": "GBP",
+      "recipient_name": "James Wilson",
+      "recipient_account": "GB29NWBK60161331926819",
+      "recipient_bank": "NatWest",
+      "recipient_bank_code": "NWBKGB2L",
+      "status": "approved",
+      "description": "Monthly salary payment - November 2024",
+      "created_at": "2024-11-25T07:20:00Z",
+      "updated_at": "2024-11-26T10:15:00Z",
+      "processed_at": null,
+      "rejection_reason": ""
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 6,
+    "fields": {
+      "amount": "8750.25",
+      "currency": "USD",
+      "recipient_name": "Tech Solutions Inc.",
+      "recipient_account": "123456789",
+      "recipient_bank": "Chase Bank",
+      "recipient_bank_code": "CHASUS33",
+      "status": "cancelled",
+      "description": "Annual software license renewal - cancelled due to contract termination",
+      "created_at": "2024-10-10T13:30:00Z",
+      "updated_at": "2024-10-12T09:00:00Z",
+      "processed_at": null,
+      "rejection_reason": ""
+    }
+  },
+  {
+    "model": "request.paymentrequest",
+    "pk": 7,
+    "fields": {
+      "amount": "125000.00",
+      "currency": "RUB",
+      "recipient_name": "Петров Сергей Александрович",
+      "recipient_account": "40817810500001234567",
+      "recipient_bank": "ПАО 'ВТБ'",
+      "recipient_bank_code": "044525187",
+      "status": "completed",
+      "description": "Выплата премии по итогам квартала",
+      "created_at": "2024-09-30T16:00:00Z",
+      "updated_at": "2024-10-02T11:30:00Z",
+      "processed_at": "2024-10-02T11:30:00Z",
+      "rejection_reason": ""
+    }
+  }
+]

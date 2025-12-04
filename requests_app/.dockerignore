@@ -1,0 +1,10 @@
+README.md
+Dockerfile
+__pycache__
+.venv/
+.idea/
+.git/
+.env.sample
+.env
+.env.backend
+.env.db
