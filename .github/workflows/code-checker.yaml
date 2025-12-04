@@ -50,7 +50,11 @@ jobs:
         uv sync --all-extras
     - name: Run tests
       env:
-        DATABASE_URL: postgresql://test_user:test_password@localhost:5432/test_db
+        POSTGRES_DB: test_db
+        POSTGRES_USER: test_user
+        POSTGRES_PASSWORD: test_password
+        POSTGRES_HOST: localhost
+        POSTGRES_PORT: 5432
         DJANGO_SETTINGS_MODULE: config.settings
         SECRET_KEY: test-secret-key-for-ci
         DEBUG: 'False'
