@@ -22,6 +22,7 @@ dev = [
     "ruff>=0.8.4",
     "pre-commit>=4.0.1",
     "pytest>=8.3.4",
+    "pytest-django>=4.9.0",
 ]
 
 [tool.ruff]
@@ -52,3 +53,16 @@ known-first-party = ["config", "request"]
 "*/migrations/*.py" = ["E501", "DJ01"]
 "*/tests/*.py" = ["B008"]
 "gunicorn.conf.py" = ["N999"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+pythonpath = ["requests_app"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+testpaths = ["requests_app"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "-ra",
+]

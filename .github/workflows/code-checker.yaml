@@ -54,7 +54,5 @@ jobs:
         DJANGO_SETTINGS_MODULE: config.settings
         SECRET_KEY: test-secret-key-for-ci
         DEBUG: 'False'
-        PYTHONPATH: ${{ github.workspace }}/requests_app
       run: |
-        cd requests_app
         uv run pytest --verbose
