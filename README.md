@@ -399,3 +399,17 @@ MIT
 ## Контакты
 
 Для вопросов и предложений создавайте issues в репозитории проекта.
+
+Скриншоты:
+## Админ панель
+<img width="1449" height="872" alt="image" src="https://github.com/user-attachments/assets/866434d5-116f-42f6-a69b-e37106a5a8ff" />
+
+## API
+<img width="1418" height="899" alt="image" src="https://github.com/user-attachments/assets/bc039c7c-5277-41b3-9121-bd9787d3d981" />
+
+## Celery task worker
+<img width="1492" height="764" alt="image" src="https://github.com/user-attachments/assets/459ee333-c1ed-4a2b-beff-8d8c54b6e138" />
+
+## CI/CD 
+базовый настроен, запуск линтера - тестов, далее можно развивать (нотификации и тп)
+
