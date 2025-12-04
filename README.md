@@ -410,6 +410,10 @@ MIT
 ## Celery task worker
 <img width="1492" height="764" alt="image" src="https://github.com/user-attachments/assets/459ee333-c1ed-4a2b-beff-8d8c54b6e138" />
 
+## RabbitMQ
+<img width="1463" height="887" alt="image" src="https://github.com/user-attachments/assets/cea2d440-2433-4cbc-8b5d-2783a53aeec2" />
+
 ## CI/CD 
-базовый настроен, запуск линтера - тестов, далее можно развивать (нотификации и тп)
+
+базовый настроен, запуск линтера - тестов, далее можно развивать (нотификации и тп), пуши в докер реджистри и тп
 
