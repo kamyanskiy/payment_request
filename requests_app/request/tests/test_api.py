@@ -27,7 +27,7 @@ class PaymentRequestAPITests(APITestCase):
     def test_create_payment_request_success(self):
         """Test successful creation of a payment request."""
         # Mock the Celery task to avoid actual execution
-        with patch("request.tasks.process_payment_request.delay"):
+        with patch("request.tasks.process_payment_request.apply_async"):
             response = self.client.post(self.url, self.valid_payload)
 
             self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -40,15 +40,18 @@ class PaymentRequestAPITests(APITestCase):
 
     def test_create_payment_request_triggers_celery(self):
         """Test that Celery task is triggered upon creation."""
-        with patch("request.tasks.process_payment_request.delay") as mock_task:
+        with patch("request.tasks.process_payment_request.apply_async") as mock_task:
             with self.captureOnCommitCallbacks(execute=True):
                 response = self.client.post(self.url, self.valid_payload)
 
             self.assertEqual(response.status_code, status.HTTP_201_CREATED)
 
-            # Verify task was called with the correct ID
+            # Verify task was called with the correct ID and countdown
             payment_request = PaymentRequest.objects.first()
-            mock_task.assert_called_once_with(payment_request.id)
+            mock_task.assert_called_once_with(
+                args=[payment_request.id],
+                countdown=2,
+            )
 
     def test_create_payment_request_invalid_amount(self):
         """Test validation for negative/zero amount."""
